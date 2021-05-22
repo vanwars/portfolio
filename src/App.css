@@ -1,9 +1,16 @@
 .App {
   text-align: center;
+  font-family: bilo, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #F39B53;
+  
 }
-
+body {
+  background-color: #F9F4F0;
+}
 .App-logo {
-  height: 40vmin;
+  height: 40px;
   pointer-events: none;
 }
 
@@ -12,7 +19,77 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* background-color: #E4E1DC;
+  border: solid 1px #28414b; */
+  border-radius: 30px;
+  justify-content: space-between;
+  height: 50px;
+}
+.navigation a {
+  text-decoration: none;
+  align-content: center;
+  font-size: 15px;
+  color: #CB977C;
+  justify-content: flex-start;
+  align-self: center; 
+  padding: 10px;
+  text-align: left; 
+}
+.navigation a:hover {
+  color: #212630;
+}
+#Name {
+  font-family: sloop-script-one, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  margin-left: 15px;
+  margin-top: 0;
+}
+#Name:hover {
+  color: #CB977C;
+}
+.NavButtons {
+  margin-right: 15px;
+  align-self: center;
+}
+.MainAbout {
+  display: grid;
+  grid-template-columns: 0.1fr 0.85fr 1fr;
+  grid-template-areas:
+    "blank left right";
+  /* grid-template-rows: 0px; */
+  font-family: bilo, sans-serif;
+  margin-right: 20px;
+}
+.AboutPic {
+  grid-area: left;
+  margin: 15px;
+}
+.AboutPic img {
+  max-width: 70%; 
+  height: auto;
+}
+.AboutText {
+  grid-area: right;
+  max-width: 85%;
+  justify-self: left;
+  margin-top: 150px;
+}
+#AboutMe {
+  font-size: 50px;
+  color: #CB977C;
+  margin: 0px;
+}
+#AboutMeContent {
+  font-size: 19px;
+  text-align: justify;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,7 +104,10 @@
 .App-link {
   color: #61dafb;
 }
-
+.main {
+  /* margin-top: 25px; */
+  color: #212630;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
