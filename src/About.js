@@ -11,8 +11,7 @@ class About extends React.Component {
           <div className="AboutText">
             <h2 id="AboutMe">ABOUT ME</h2>
           <p id="AboutMeContent">
-          Ayelet Blumovitz is a third-year Design student and Pinterest enthusiast. She is studying in the Tulane school of Architecture, with interests in design that range from graphic to interior to product design. With an architecture concentration, Ayelet hopes to bring her design knowledge into the field and explore the many different outlets design thinking can reach.
-          </p>
+          Ayelet Blumovitz is a third-year Design student, crafter, painter, and Pinterest enthusiast. She is studying in the Tulane school of Architecture, with interests in design that range from graphic to interior to product design. With an architecture concentration and music minor, Ayelet hopes to connect her design knowledge to her music education and continue to explore the many different outlets design thinking can reach.          </p>
           </div>
           <div className="AboutPic">
             <img src={pic}></img>

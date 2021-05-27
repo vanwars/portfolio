@@ -9,6 +9,10 @@
 body {
   background-color: #F9F4F0;
 }
+.main {
+  margin-top: 80px;
+  color: #212630;
+}
 .App-logo {
   height: 40px;
   pointer-events: none;
@@ -22,13 +26,17 @@ body {
 .navigation {
   display: flex;
   flex-wrap: wrap;
+  width: 100vw;
+  background-color: #F9F4F0;
   padding-top: 10px;
   padding-bottom: 10px;
-  /* background-color: #E4E1DC;
-  border: solid 1px #28414b; */
-  border-radius: 30px;
   justify-content: space-between;
   height: 50px;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
 }
 .navigation a {
   text-decoration: none;
@@ -43,6 +51,15 @@ body {
 .navigation a:hover {
   color: #212630;
 }
+@keyframes nameAni {
+  0% {
+		font-size: 100px;
+	}
+	50% {
+		font-size: 70px;
+	}
+}
+
 #Name {
   font-family: sloop-script-one, sans-serif;
   font-weight: 700;
@@ -50,9 +67,14 @@ body {
   font-size: 40px;
   margin-left: 15px;
   margin-top: 0;
+  /* animation-name: nameAni;
+  animation-duration: 1s;
+  animation-iteration-count: 1; */
 }
 #Name:hover {
   color: #CB977C;
+  cursor: pointer;
+  pointer-events: auto;
 }
 .NavButtons {
   margin-right: 15px;
@@ -63,7 +85,6 @@ body {
   grid-template-columns: 0.1fr 0.85fr 1fr;
   grid-template-areas:
     "blank left right";
-  /* grid-template-rows: 0px; */
   font-family: bilo, sans-serif;
   margin-right: 20px;
 }
@@ -90,6 +111,112 @@ body {
   font-size: 19px;
   text-align: justify;
 }
+.Home {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "topleft topright"
+    "bottomleft bottomright";
+}
+.img_description {
+  text-align: center;
+  margin: 15% 0 0 12.5%;
+  position: absolute;
+  z-index: 2;
+  font-size: 50px;
+  font-weight: 300;
+  color: #CB977C;
+  opacity: 0;
+  text-decoration: none;
+}
+.img_description:hover {
+  cursor: pointer;
+  pointer-events: auto;
+}
+.photography {
+  grid-area: topleft;
+}
+.photography img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.8;
+  z-index: 0;
+}
+.photography:hover img{
+  transition: all 0.5s ease;
+  opacity: 0.15;
+}
+.photography:hover .img_description{
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.productdesign {
+  grid-area: topright;
+}
+.productdesign img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.8;
+  z-index: 0;
+}
+.productdesign:hover img{
+  transition: all 0.5s ease;
+  opacity: 0.15;
+}
+.productdesign:hover .img_description{
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.spacialdesign {
+  grid-area: bottomleft;
+}
+.spacialdesign img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.8;
+  z-index: 0;
+}
+.spacialdesign:hover img{
+  transition: all 0.5s ease;
+  opacity: 0.15;
+}
+.spacialdesign:hover .img_description{
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.graphicdesign {
+  grid-area: bottomright;
+}
+.graphicdesign img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.8;
+  z-index: 0;
+}
+.graphicdesign:hover img{
+  transition: all 0.5s ease;
+  opacity: 0.15;
+}
+.graphicdesign:hover .img_description{
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+
+.picDetails img{
+  height: 500px;
+  width: auto;
+}
+
+#resumeDownload, .backToMain {
+  border-radius: 5px;
+  background-color: #FFDCC2;
+  font-size: 20px;
+  border: black 1px solid;
+  text-decoration: none;
+  color: #212630;
+  padding: 5px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -104,10 +231,7 @@ body {
 .App-link {
   color: #61dafb;
 }
-.main {
-  /* margin-top: 25px; */
-  color: #212630;
-}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

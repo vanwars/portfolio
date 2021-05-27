@@ -51,6 +51,7 @@ class Contact extends React.Component {
     // this.props.getPageFunction("contact");
     return(
       <div className="Contact">
+        <p>LinkedIn: https://www.linkedin.com/in/ayeletblumovitz/</p>
         <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
           <div className="Form">
             <label htmlFor="name">Name</label>
