@@ -51,6 +51,10 @@ body {
 .navigation a:hover {
   color: #212630;
 }
+.NavButtons {
+  margin-right: 25px;
+  align-self: center;
+}
 @keyframes nameAni {
   0% {
 		font-size: 100px;
@@ -75,10 +79,6 @@ body {
   color: #CB977C;
   cursor: pointer;
   pointer-events: auto;
-}
-.NavButtons {
-  margin-right: 15px;
-  align-self: center;
 }
 .MainAbout {
   display: grid;
@@ -113,18 +113,19 @@ body {
 }
 .Home {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
   grid-template-areas:
-    "topleft topright"
-    "bottomleft bottomright";
+    "topleft topmiddle topright"
+    "midleft midmiddle midright"
+    "bottomleft bottommiddle bottomright";
 }
 .img_description {
   text-align: center;
-  margin: 15% 0 0 12.5%;
+  /* margin: 9% 0 0 0; */
   position: absolute;
   z-index: 2;
-  font-size: 50px;
+  font-size: 38px;
   font-weight: 300;
   color: #CB977C;
   opacity: 0;
@@ -134,83 +135,159 @@ body {
   cursor: pointer;
   pointer-events: auto;
 }
-.photography {
-  grid-area: topleft;
-}
-.photography img {
+.photography img, .productdesign img, .spacialdesign img, .graphicdesign img, .cubeproject img, .tooldesign img, .pedestalproject img, .infodesign img {
   max-width: 100%;
   height: auto;
   opacity: 0.8;
   z-index: 0;
 }
-.photography:hover img{
+.photography:hover img, .productdesign:hover img, .spacialdesign:hover img, .graphicdesign:hover img, .cubeproject:hover img, .tooldesign:hover img, .pedestalproject:hover img, .infodesign:hover img{
   transition: all 0.5s ease;
   opacity: 0.15;
 }
-.photography:hover .img_description{
+.photography:hover .img_description, .productdesign:hover .img_description, .spacialdesign:hover .img_description, .graphicdesign:hover .img_description, .cubeproject:hover .img_description, .tooldesign:hover .img_description, .pedestalproject:hover .img_description, .infodesign:hover .img_description{
   transition: all 0.5s ease;
   opacity: 1;
+}
+.photography {
+  grid-area: midleft;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .productdesign {
   grid-area: topright;
-}
-.productdesign img {
-  max-width: 100%;
-  height: auto;
-  opacity: 0.8;
-  z-index: 0;
-}
-.productdesign:hover img{
-  transition: all 0.5s ease;
-  opacity: 0.15;
-}
-.productdesign:hover .img_description{
-  transition: all 0.5s ease;
-  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .spacialdesign {
-  grid-area: bottomleft;
-}
-.spacialdesign img {
-  max-width: 100%;
-  height: auto;
-  opacity: 0.8;
-  z-index: 0;
-}
-.spacialdesign:hover img{
-  transition: all 0.5s ease;
-  opacity: 0.15;
-}
-.spacialdesign:hover .img_description{
-  transition: all 0.5s ease;
-  opacity: 1;
+  grid-area: topmiddle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .graphicdesign {
+  grid-area: midright;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cubeproject {
+  grid-area: bottommiddle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tooldesign {
+  grid-area: topleft;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pedestalproject {
   grid-area: bottomright;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.graphicdesign img {
-  max-width: 100%;
-  height: auto;
-  opacity: 0.8;
-  z-index: 0;
+.infodesign {
+  grid-area: bottomleft;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.graphicdesign:hover img{
-  transition: all 0.5s ease;
-  opacity: 0.15;
+#infographic {
+  width: 900px;
 }
-.graphicdesign:hover .img_description{
-  transition: all 0.5s ease;
-  opacity: 1;
+#arrow {
+  border: solid #CB977C;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  width: 10px;
+  height: 10px;
+  background-color: none;
 }
-
+.picDetails {
+  font-family: bilo, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #F39B53;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30px;
+}
+.infoDesignDetails{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-left: 30px;
+}
 .picDetails img{
-  height: 500px;
-  width: auto;
+  width: 450px;
+  height: auto;
+  margin: 10px;
+  align-self: center;
 }
-
+.contact {
+  height: 200px;
+  background-color: #FFDCC2;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: bilo, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 30px;
+}
+.formInputs {
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+.icons {
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four";
+}
+#sec1 {
+  grid-area: one;
+  display: flex;
+  flex-wrap: wrap;
+}
+#sec2 {
+  grid-area: two;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#sec3 {
+  grid-area: three;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#sec4 {
+  grid-area: four;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.icons img {
+  width: 20px;
+  height: 20px;
+}
 #resumeDownload, .backToMain {
   border-radius: 5px;
-  background-color: #FFDCC2;
+  /* background-color: #FFDCC2; */
   font-size: 20px;
   border: black 1px solid;
   text-decoration: none;

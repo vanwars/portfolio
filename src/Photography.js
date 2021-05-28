@@ -17,8 +17,8 @@ class Photography extends React.Component {
           <img src={p1}></img>
           <img src={p2}></img>
           <img src={p3}></img>
-          <img src={p4}></img>
           <img src={p5}></img>
+          <img src={p4}></img>
           <img src={p6}></img>
           <img src={p7}></img>
           </div>

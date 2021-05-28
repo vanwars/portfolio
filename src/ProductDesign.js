@@ -10,7 +10,7 @@ class ProductDesign extends React.Component {
     render () {
       return (
         <div className="picDetails">
-          <button className="backToMain" onClick={this.props.backFunc}>Back</button>
+          <button className="backToMain" onClick={this.props.backFunc}>BACK</button>
           <div>
             <img src={p1}></img>
             <img src={p2}></img>
