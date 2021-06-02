@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import { BrowserRouter, Route, Link } from 'react-router-dom'; 
+import { Route, Link } from 'react-router-dom'; 
+import { HashRouter as BrowserRouter } from 'react-router-dom';
 import Home from './Home.js'; 
 import Contact from './Contact.js'; 
 import About from './About.js'; 

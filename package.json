@@ -14,7 +14,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "https://ayeletblumovitz.github.io/portfolio",
+  "homepage": "https://vanwars.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",

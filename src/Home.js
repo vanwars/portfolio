@@ -7,7 +7,8 @@
   import cubeproject from './cubeproject.png'
   import pedestalproject from './pedestalproject.png'
   import infodesign from './infodesign.png'
-  import { BrowserRouter, Route, Link } from 'react-router-dom'; 
+  import { Route, Link } from 'react-router-dom'; 
+  import { HashRouter as BrowserRouter } from 'react-router-dom';
   import Photography from './Photography.js';
   import GraphicDesign from './GraphicDesign.js';
   import SpacialDesign from './SpacialDesign.js';
